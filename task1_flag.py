@@ -1,0 +1,26 @@
+ESC = "\x1b"
+CSI = f"{ESC}["
+RESET = f"{CSI}0m"
+
+
+def block(rgb=(0, 0, 0), width=2):
+    r, g, b = rgb
+    return f"\033[48;2;{r};{g};{b}m" + (" " * width) + RESET
+
+def japan_flag():
+    w, h = 50, 20
+    cx, cy = w // 2, h // 2
+
+    r = 5
+
+    for y in range(h):
+        for x in range(w):
+            if (x - cx) ** 2 + (y - cy) ** 2 <= r ** 2:
+                print(f"{CSI}41m {RESET}", end="")
+            else:
+                print(f"{CSI}47m {RESET}", end="")
+        print()
+
+
+if __name__ == '__main__':
+    japan_flag()
