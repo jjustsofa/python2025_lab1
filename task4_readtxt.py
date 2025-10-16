@@ -3,10 +3,10 @@ import math
 import os
 clear = lambda: os.system('cls')
 RED='\u001b[41m'
-RED1='\u001b[33m'
+RED1='\u001b[36m'
 END='\u001b[0m'
 BLUE='\u001b[44m'
-WHITE='\u001b[47m'
+WHITE='\u001b[40m'
 GREEN='\u001b[42m'
 ORANGE ='\u001b[43m'
 ERASE='\x1B[2K'#erase the line
